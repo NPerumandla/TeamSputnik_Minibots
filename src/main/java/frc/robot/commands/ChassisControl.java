@@ -1,13 +1,17 @@
 package frc.robot.commands;
 
+import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.CommandBase;
+import frc.robot.Constants;
+import frc.robot.RobotContainer;
 import frc.robot.subsystems.Chassis;
 
-import static frc.robot.Constants.mController;
+
 
 public class ChassisControl extends CommandBase {
 
     public Chassis commandChassis;
+
 
 
 
@@ -23,8 +27,8 @@ public class ChassisControl extends CommandBase {
 
     @Override
     public void execute(){
-        double x = mController.getX();
-        double y = mController.getY();
+        double x = RobotContainer.mController.getX();
+        double y = RobotContainer.mController.getY();
         commandChassis.runJoystick(x, y);
     }
 

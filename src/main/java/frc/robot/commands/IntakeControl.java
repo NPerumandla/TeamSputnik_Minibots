@@ -2,9 +2,10 @@ package frc.robot.commands;
 
 
 import edu.wpi.first.wpilibj2.command.InstantCommand;
+import frc.robot.RobotContainer;
 import frc.robot.subsystems.Intake;
 
-import static frc.robot.Constants.mController;
+
 
 public class IntakeControl extends InstantCommand {
 
@@ -19,7 +20,7 @@ public class IntakeControl extends InstantCommand {
 
     @Override
     public void initialize() {
-        if(mController.getAButtonPressed()){
+        if(RobotContainer.mController.getAButtonPressed()){
             commandIntake.runIntake();
         }
     }
