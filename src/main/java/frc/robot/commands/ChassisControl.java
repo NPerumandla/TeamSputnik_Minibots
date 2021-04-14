@@ -10,14 +10,12 @@ import frc.robot.subsystems.Chassis;
 
 public class ChassisControl extends CommandBase {
 
-    public Chassis commandChassis;
 
 
 
+    public ChassisControl(){
 
-    public ChassisControl(Chassis chassis){
-        commandChassis = chassis;
-        addRequirements(commandChassis);
+        addRequirements(RobotContainer.mChassis);
     }
 
     @Override
@@ -29,7 +27,7 @@ public class ChassisControl extends CommandBase {
     public void execute(){
         double x = RobotContainer.mController.getX();
         double y = RobotContainer.mController.getY();
-        commandChassis.runJoystick(x, y);
+        RobotContainer.mChassis.runJoystick(x, y);
     }
 
 

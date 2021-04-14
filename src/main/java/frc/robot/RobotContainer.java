@@ -5,10 +5,15 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.GenericHID;
+import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.commands.ChassisControl;
+import frc.robot.commands.DoorControl;
 import frc.robot.commands.ExampleCommand;
+import frc.robot.commands.IntakeControl;
 import frc.robot.subsystems.Chassis;
+import frc.robot.subsystems.Door;
 import frc.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.Constants;
@@ -25,9 +30,10 @@ public class RobotContainer {
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
 
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
-  public Chassis mChassis;
+  public static Chassis mChassis;
   public static XboxController mController = new XboxController(Constants.CONTROLLER);
-  public Intake intake;
+  public static Intake intake;
+  public static Door door;
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
@@ -35,7 +41,10 @@ public class RobotContainer {
 
     configureButtonBindings();
 
-    mChassis.setDefaultCommand(new ChassisControl(new Chassis()));
+
+    mChassis.setDefaultCommand(new ChassisControl());
+    intake.setDefaultCommand(new IntakeControl());
+    door.setDefaultCommand(new DoorControl());
   }
 
   /**
@@ -46,6 +55,11 @@ public class RobotContainer {
    */
   private void configureButtonBindings() {
 
+    JoystickButton aButton = new JoystickButton(mController, Constants.A_BUTTON);
+    aButton.whenPressed(intake.runIntake());
+
+    JoystickButton bButton = new JoystickButton(mController, Constants.B_BUTTON);
+    bButton.whenPressed(door.openDoor());
 
   }
 
