@@ -8,7 +8,7 @@ public class DoorControl extends InstantCommand {
 
 
 
-    public void DoorControl(){
+    public DoorControl(){
 
         addRequirements(RobotContainer.door);
     }

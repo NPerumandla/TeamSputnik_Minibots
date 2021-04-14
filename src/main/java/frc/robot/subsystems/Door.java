@@ -8,7 +8,7 @@ import frc.robot.Constants;
 public class Door extends SubsystemBase {
     public WPI_TalonFX doorMotor;
 
-    public void Door(){
+    public Door(){
         doorMotor = new WPI_TalonFX(Constants.DOOR_MOTOR);
         doorMotor.config_kP(0, 1.0);
         doorMotor.config_kI(0,0);
