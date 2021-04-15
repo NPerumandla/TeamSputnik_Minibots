@@ -27,9 +27,9 @@ public class Intake extends SubsystemBase {
 
 
     // fix the input
-    public Command runIntake() {
+    public void runIntake() {
         intakeMotor.setSelectedSensorPosition(0);
-        return null;
+
     }
 
 

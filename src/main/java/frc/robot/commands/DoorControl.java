@@ -7,10 +7,12 @@ import frc.robot.subsystems.Door;
 public class DoorControl extends InstantCommand {
 
 
+    public Door dDoor;
 
-    public DoorControl(){
+    public DoorControl(Door door){
 
-        addRequirements(RobotContainer.door);
+        dDoor = door;
+        addRequirements(dDoor);
     }
 
     @Override

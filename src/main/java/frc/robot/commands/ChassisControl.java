@@ -11,11 +11,13 @@ import frc.robot.subsystems.Chassis;
 public class ChassisControl extends CommandBase {
 
 
+    Chassis cChassis;
 
+    public ChassisControl(Chassis chassis){
 
-    public ChassisControl(){
+        cChassis = chassis;
+        addRequirements(cChassis);
 
-        addRequirements(RobotContainer.mChassis);
     }
 
     @Override

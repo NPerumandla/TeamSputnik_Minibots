@@ -42,9 +42,9 @@ public class RobotContainer {
     configureButtonBindings();
 
 
-    mChassis.setDefaultCommand(new ChassisControl());
-    intake.setDefaultCommand(new IntakeControl());
-    door.setDefaultCommand(new DoorControl());
+    mChassis.setDefaultCommand(new ChassisControl(mChassis));
+    intake.setDefaultCommand(new IntakeControl(intake));
+    door.setDefaultCommand(new DoorControl(door));
   }
 
   /**
@@ -56,10 +56,10 @@ public class RobotContainer {
   private void configureButtonBindings() {
 
     JoystickButton aButton = new JoystickButton(mController, Constants.A_BUTTON);
-    aButton.whenPressed(intake.runIntake());
+    aButton.whenPressed(new IntakeControl(intake));
 
     JoystickButton bButton = new JoystickButton(mController, Constants.B_BUTTON);
-    bButton.whenPressed(door.openDoor());
+    bButton.whenPressed(new DoorControl(door));
 
   }
 

@@ -16,8 +16,8 @@ public class Door extends SubsystemBase {
     }
 
     //Set value of door
-    public Command openDoor(){
+    public void openDoor(){
         doorMotor.setSelectedSensorPosition(0);
-        return null;
+
     }
 }
