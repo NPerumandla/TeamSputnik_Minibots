@@ -8,6 +8,7 @@ import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
 import edu.wpi.first.wpilibj2.command.button.JoystickButton;
+import frc.robot.auton.AutonDrive;
 import frc.robot.commands.ChassisControl;
 import frc.robot.commands.DoorControl;
 import frc.robot.commands.ExampleCommand;
@@ -18,6 +19,8 @@ import frc.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
 import frc.robot.Constants;
 import frc.robot.subsystems.Intake;
+
+import java.util.ArrayList;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -70,6 +73,12 @@ public class RobotContainer {
    */
   public Command getAutonomousCommand() {
     // An ExampleCommand will run in autonomous
+
+    ArrayList<Command> autonCommand = new ArrayList<>();
+
+    autonCommand.add(new AutonDrive(0.5,0,1,mChassis));
+    autonCommand.add(new AutonDrive(0.5,.5,1.5,mChassis));
+
     return m_autoCommand;
   }
 }
