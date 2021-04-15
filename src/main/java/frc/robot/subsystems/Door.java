@@ -10,6 +10,7 @@ public class Door extends SubsystemBase {
 
     public Door(){
         doorMotor = new WPI_TalonFX(Constants.DOOR_MOTOR);
+        doorMotor.setSelectedSensorPosition(0);
         doorMotor.config_kP(0, 1.0);
         doorMotor.config_kI(0,0);
         doorMotor.config_kD(0,0);
@@ -17,7 +18,7 @@ public class Door extends SubsystemBase {
 
     //Set value of door
     public void openDoor(){
-        doorMotor.setSelectedSensorPosition(0);
+
 
     }
 }

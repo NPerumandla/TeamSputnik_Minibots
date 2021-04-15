@@ -18,8 +18,8 @@ import edu.wpi.first.wpilibj.XboxController;
 public final class Constants {
     public static final int CONTROLLER = 0;
 
-    public static final int LEFT_CONTROLLER = 0;
-    public static final int RIGHT_CONTROLLER = 1;
+    public static final int LEFT_CONTROLLER = 1;
+    public static final int RIGHT_CONTROLLER = 4;
     public static final int INTAKE_MOTOR = 2;
     public static final int DOOR_MOTOR = 3;
 
