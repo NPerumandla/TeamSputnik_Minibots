@@ -15,7 +15,7 @@ public class AutonDrive extends CommandBase {
     private Chassis cChassis;
     private boolean isFinished;
 
-    private Timer mTimer;
+    Timer mTimer;
 
     public AutonDrive(double speed, double rotate, double amtTime, Chassis chassis){
 
