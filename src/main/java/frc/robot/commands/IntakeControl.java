@@ -20,6 +20,6 @@ public class IntakeControl extends InstantCommand {
 
     @Override
     public void execute() {
-        RobotContainer.intake.runIntake();
+        iIntake.runIntake();
     }
 }

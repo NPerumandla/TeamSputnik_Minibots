@@ -18,7 +18,7 @@ public class DoorControl extends InstantCommand {
     @Override
     public void execute(){
 
-        RobotContainer.door.openDoor();
+        dDoor.openDoor();
 
     }
 

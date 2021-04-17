@@ -33,10 +33,10 @@ public class RobotContainer {
   private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
 
   private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
-  public static Chassis mChassis;
+  public static Chassis mChassis = new Chassis();
   public static XboxController mController = new XboxController(Constants.CONTROLLER);
-  public static Intake intake;
-  public static Door door;
+  public static Intake intake = new Intake();
+  public static Door door = new Door();
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
@@ -71,7 +71,7 @@ public class RobotContainer {
    *
    * @return the command to run in autonomous
    */
-  public Command getAutonomousCommand() {
+  public ArrayList<Command> getAutonomousCommand() {
     // An ExampleCommand will run in autonomous
 
     ArrayList<Command> autonCommand = new ArrayList<>();
@@ -79,6 +79,6 @@ public class RobotContainer {
     autonCommand.add(new AutonDrive(0.5,0,1,mChassis));
     autonCommand.add(new AutonDrive(0.5,.5,1.5,mChassis));
 
-    return m_autoCommand;
+    return autonCommand;
   }
 }
