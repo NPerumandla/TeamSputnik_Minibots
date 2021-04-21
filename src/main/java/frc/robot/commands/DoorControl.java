@@ -15,12 +15,12 @@ public class DoorControl extends InstantCommand {
         addRequirements(dDoor);
     }
 
-    @Override
-    public void execute(){
-
-        dDoor.openDoor();
-
-    }
+//    @Override
+//    public void execute(){
+//
+//        dDoor.openDoor();
+//
+//    }
 
 
 }

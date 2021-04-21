@@ -8,27 +8,28 @@ import frc.robot.commands.IntakeControl;
 
 public class Intake extends SubsystemBase {
 
-    public WPI_TalonFX intakeMotor;
+//    public WPI_TalonFX intakeMotor;
+//
+//
+//
+//
+//    // fix motor id
+//    public Intake(){
+//        intakeMotor = new WPI_TalonFX(Constants.INTAKE_MOTOR);
+//
+//        intakeMotor.setSelectedSensorPosition(0);
+//        intakeMotor.config_kP(0, 1.0);
+//        intakeMotor.config_kI(0,0);
+//        intakeMotor.config_kD(0,0);
+//
+//
 
-
-
-
-    // fix motor id
-    public Intake(){
-        intakeMotor = new WPI_TalonFX(Constants.INTAKE_MOTOR);
-
-        intakeMotor.config_kP(0, 1.0);
-        intakeMotor.config_kI(0,0);
-        intakeMotor.config_kD(0,0);
-
-
-
-    }
+ //   }
 
 
     // fix the input
     public void runIntake() {
-        intakeMotor.setSelectedSensorPosition(0);
+
 
     }
 

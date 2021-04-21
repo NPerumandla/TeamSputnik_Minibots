@@ -18,7 +18,7 @@ public class Chassis extends SubsystemBase {
     public Chassis(){
         right_motor = new WPI_TalonFX(Constants.RIGHT_CONTROLLER);
         left_motor = new WPI_TalonFX(Constants.LEFT_CONTROLLER);
-        differentialDrive = new DifferentialDrive(left_motor, right_motor);
+        differentialDrive = new DifferentialDrive(right_motor, left_motor);
 
     }
 

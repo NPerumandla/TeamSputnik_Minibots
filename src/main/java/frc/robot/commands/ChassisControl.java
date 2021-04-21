@@ -30,8 +30,8 @@ public class ChassisControl extends CommandBase {
 
     @Override
     public void execute(){
-        double x = RobotContainer.mController.getX();
-        double y = RobotContainer.mController.getY();
+        double x = RobotContainer.mController.getRawAxis(1);
+        double y = RobotContainer.mController.getRawAxis(4);
         mChassis.runJoystick(x, y);
     }
 
