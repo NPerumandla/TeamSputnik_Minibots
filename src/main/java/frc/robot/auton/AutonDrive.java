@@ -40,13 +40,10 @@ public class AutonDrive extends CommandBase {
     public void execute() {
         RobotContainer.mChassis.runJoystick(driveSpeed,rotationSpeed);
 
-        if(mTimer.get() >= time){
-            isFinished = false;
-        }
     }
 
     @Override
     public boolean isFinished() {
-        return true;
+        return (mTimer.get() >= time);
     }
 }

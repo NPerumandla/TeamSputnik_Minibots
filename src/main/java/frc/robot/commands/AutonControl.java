@@ -17,9 +17,12 @@ public class AutonControl extends SequentialCommandGroup {
         mChassis = chassis;
         addRequirements(mChassis);
 
-        addCommands(new AutonDrive(.5,0,1,mChassis));
-        addCommands(new AutonDrive(0,.5,1,mChassis));
-        addCommands(new AutonDrive(-.3,0,.4,mChassis));
+        addCommands(new AutonDrive(-.5,.25,1,mChassis));
+  //      addCommands(new AutonDrive(0,.5,1,mChassis));
+        addCommands(new AutonDrive(0,0,1,mChassis));
+        addCommands(new AutonDrive(.5,-.25,1,mChassis));
+        addCommands(new AutonDrive(0,0,1,mChassis));
+        addCommands(new AutonDrive(-.7,0,1,mChassis));
 
 
     }
