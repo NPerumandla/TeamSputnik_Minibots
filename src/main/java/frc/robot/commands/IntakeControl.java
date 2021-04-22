@@ -18,8 +18,8 @@ public class IntakeControl extends InstantCommand {
         addRequirements(iIntake);
     }
 
-    @Override
-    public void execute() {
-        iIntake.runIntake();
-    }
+//    @Override
+//    public void execute() {
+//        iIntake.runIntake();
+//    }
 }

@@ -5,19 +5,12 @@
 package frc.robot;
 
 import edu.wpi.first.wpilibj.GenericHID;
-import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
-import edu.wpi.first.wpilibj2.command.button.JoystickButton;
 import frc.robot.auton.AutonDrive;
 import frc.robot.commands.ChassisControl;
-import frc.robot.commands.DoorControl;
-import frc.robot.commands.ExampleCommand;
-import frc.robot.commands.IntakeControl;
 import frc.robot.subsystems.Chassis;
 import frc.robot.subsystems.Door;
-import frc.robot.subsystems.ExampleSubsystem;
 import edu.wpi.first.wpilibj2.command.Command;
-import frc.robot.Constants;
 import frc.robot.subsystems.Intake;
 
 import java.util.ArrayList;
@@ -30,9 +23,9 @@ import java.util.ArrayList;
  */
 public class RobotContainer {
   // The robot's subsystems and commands are defined here...
-  private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
-
-  private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
+//  private final ExampleSubsystem m_exampleSubsystem = new ExampleSubsystem();
+//
+//  private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
   public static Chassis mChassis = new Chassis();
   public static XboxController mController = new XboxController(Constants.CONTROLLER);
   public static Intake intake = new Intake();

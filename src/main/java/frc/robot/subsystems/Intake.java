@@ -8,11 +8,11 @@ import frc.robot.commands.IntakeControl;
 
 public class Intake extends SubsystemBase {
 
-//    public WPI_TalonFX intakeMotor;
-//
-//
-//
-//
+    public WPI_TalonFX intakeMotor;
+
+
+
+
 //    // fix motor id
 //    public Intake(){
 //        intakeMotor = new WPI_TalonFX(Constants.INTAKE_MOTOR);
@@ -23,15 +23,16 @@ public class Intake extends SubsystemBase {
 //        intakeMotor.config_kD(0,0);
 //
 //
-
- //   }
-
-
-    // fix the input
-    public void runIntake() {
-
-
-    }
+//
+//    }
+//
+//
+//    // fix the input
+//    public void runIntake() {
+//
+//        intakeMotor.setSelectedSensorPosition(0);
+//
+//    }
 
 
 
