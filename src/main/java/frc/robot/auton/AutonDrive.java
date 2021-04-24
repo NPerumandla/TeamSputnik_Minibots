@@ -13,7 +13,6 @@ public class AutonDrive extends CommandBase {
     private double rotationSpeed;
     private double time;
     private Chassis cChassis;
-    private boolean isFinished;
 
     Timer mTimer;
 
@@ -33,6 +32,7 @@ public class AutonDrive extends CommandBase {
     @Override
     public void initialize() {
 
+        mTimer.reset();
         mTimer.start();
     }
 

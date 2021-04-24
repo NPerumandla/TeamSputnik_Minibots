@@ -6,7 +6,7 @@ import edu.wpi.first.wpilibj2.command.CommandBase;
 import frc.robot.RobotContainer;
 import frc.robot.subsystems.Chassis;
 
-import static frc.robot.RobotContainer.mChassis;
+
 
 
 public class ChassisControl extends CommandBase {
@@ -19,7 +19,8 @@ public class ChassisControl extends CommandBase {
         cChassis = chassis;
         addRequirements(cChassis);
 
-        addRequirements(mChassis);
+
+
 
     }
 
@@ -32,7 +33,7 @@ public class ChassisControl extends CommandBase {
     public void execute(){
         double x = RobotContainer.mController.getRawAxis(1);
         double y = RobotContainer.mController.getRawAxis(4);
-        mChassis.runJoystick(x, y);
+        cChassis.runJoystick(x, y);
     }
 
 
