@@ -21,7 +21,6 @@ public class Robot extends TimedRobot {
   private Command m_autonomousCommand;
 
   private RobotContainer m_robotContainer = null;
-  private AutonControl autonCommand;
 
   /**
    * This function is run when the robot is first started up and should be used for any
@@ -32,7 +31,7 @@ public class Robot extends TimedRobot {
     // Instantiate our RobotContainer.  This will perform all our button bindings, and put our
     // autonomous chooser on the dashboard.
     m_robotContainer = new RobotContainer();
-    autonCommand = new AutonControl(RobotContainer.mChassis);
+
   }
 
   /**
@@ -62,6 +61,7 @@ public class Robot extends TimedRobot {
   @Override
   public void autonomousInit() {
 
+      AutonControl autonCommand = new AutonControl(RobotContainer.mChassis);
       autonCommand.schedule();
 
 
@@ -70,7 +70,7 @@ public class Robot extends TimedRobot {
   /** This function is called periodically during autonomous. */
   @Override
   public void autonomousPeriodic() {
-    CommandScheduler.getInstance().run();
+
 
   }
 

@@ -6,6 +6,7 @@ package frc.robot;
 
 
 import edu.wpi.first.wpilibj.XboxController;
+import edu.wpi.first.wpilibj2.command.SequentialCommandGroup;
 
 /**
  * The Constants class provides a convenient place for teams to hold robot-wide numerical or boolean
@@ -22,6 +23,7 @@ public final class Constants {
     public static final int RIGHT_CONTROLLER = 0;
     public static final int INTAKE_MOTOR = 2;
     public static final int DOOR_MOTOR = 3;
+
 
     public static final int A_BUTTON = 0;
     public static final int B_BUTTON = 1;
