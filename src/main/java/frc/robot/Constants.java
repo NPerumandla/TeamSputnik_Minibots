@@ -20,8 +20,8 @@ public final class Constants {
 
     public static final int LEFT_CONTROLLER = 1;
     public static final int RIGHT_CONTROLLER = 0;
-    public static final int INTAKE_MOTOR = 3;
-    public static final int DOOR_MOTOR = 4;
+    public static final int INTAKE_MOTOR = 2;
+    public static final int DOOR_MOTOR = 3;
 
     public static final int A_BUTTON = 0;
     public static final int B_BUTTON = 1;
