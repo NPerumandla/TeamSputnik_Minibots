@@ -25,8 +25,6 @@ public final class Constants {
     public static final int DOOR_MOTOR = 3;
 
 
-    public static final int A_BUTTON = 0;
-    public static final int B_BUTTON = 1;
 
 
 }

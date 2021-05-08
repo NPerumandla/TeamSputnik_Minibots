@@ -6,14 +6,8 @@ package frc.robot;
 
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.XboxController;
-import frc.robot.auton.AutonDrive;
 import frc.robot.commands.ChassisControl;
 import frc.robot.subsystems.Chassis;
-import frc.robot.subsystems.Door;
-import edu.wpi.first.wpilibj2.command.Command;
-import frc.robot.subsystems.Intake;
-
-import java.util.ArrayList;
 
 /**
  * This class is where the bulk of the robot should be declared. Since Command-based is a
@@ -28,8 +22,8 @@ public class RobotContainer {
 //  private final ExampleCommand m_autoCommand = new ExampleCommand(m_exampleSubsystem);
   public static Chassis mChassis = new Chassis();
   public static XboxController mController = new XboxController(Constants.CONTROLLER);
-  public static Intake intake = new Intake();
-  public static Door door = new Door();
+
+
 
   /** The container for the robot. Contains subsystems, OI devices, and commands. */
   public RobotContainer() {
@@ -40,7 +34,7 @@ public class RobotContainer {
 
     mChassis.setDefaultCommand(new ChassisControl(mChassis));
 //    intake.setDefaultCommand(new IntakeControl(intake));
-//    door.setDefaultCommand(new DoorControl(door));
+
   }
 
   /**
@@ -51,20 +45,13 @@ public class RobotContainer {
    */
   private void configureButtonBindings() {
 
-//    JoystickButton aButton = new JoystickButton(mController, Constants.A_BUTTON);
-//    aButton.whenPressed(new IntakeControl(intake));
-//
-//    JoystickButton bButton = new JoystickButton(mController, Constants.B_BUTTON);
-//    bButton.whenPressed(new DoorControl(door));
+
+
+
 
   }
 
-  /**
-   * Use this to pass the autonomous command to the main {@link Robot} class.
-   *
-   * @return the command to run in autonomous
-   */
-//  public ArrayList<Command> getAutonomousCommand() {
+  //  public ArrayList<Command> getAutonomousCommand() {
 //    // An ExampleCommand will run in autonomous
 //
 //    ArrayList<Command> autonCommand = new ArrayList<>();
